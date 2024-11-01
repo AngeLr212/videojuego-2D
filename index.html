@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Atrapar Changos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+
+</head>
+<body>
+    <header class="text-center p-3 bg-dark text-white">
+        <h1>Atrapa el Chango</h1>
+    </header>
+    
+    <main class="d-flex justify-content-center position-relative">
+        <canvas id="juegoCanvas" width="800" height="600" style="display: none;"></canvas>
+        <div id="contador" class="p-2 position-absolute text-right" style="display: none;">
+            <strong>Puntuación:</strong> <strong id="score">0</strong>
+        </div>
+        <div id="timer" class="p-2 position-absolute text-left" style="display: none;">
+            Tiempo: <span id="time">30</span> s
+        </div>
+        
+        <div id="start-screen" class="text-center background" style="display: flex; align-items: center; justify-content: center;">
+            <div class="tab">
+                <button id="start-button" class="btn btn-primary">Jugar</button>
+            </div>
+        </div>
+        
+        <div id="end-screen" class="text-center background" style="display: none;">
+            <h2>Juego Finalizado</h2>
+            <p>Puntuación Total: <span id="final-score">0</span></p>
+            <div class="tab">
+                <button id="restart-button" class="btn btn-secondary">Volver a Jugar</button>
+            </div>
+        </div>
+    </main>
+    
+    <div id="instrucciones" class="text-center p-2" style="display: none;">
+        <p>Atrapa los changos que aparecen en pantalla haciendo clic sobre ellos.</p>
+    </div>
+
+    <footer class="text-center p-3 bg-dark text-white">
+        <p>Creado por Carlos Alexis García Peña y Angel Ramirez Mendoza</p>
+    </footer>
+
+    <!-- Elemento de Audio -->
+    <audio id="background-music" src="img/musica.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total */
+}
+
+html, body {
+    overflow: hidden; /* Desactiva el scroll */
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+}
+
+body {
+    background-color: #333; /* Fondo oscuro para el body */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Oculta el cursor del mouse en toda la página */
+body {
+    cursor: none;
+}
+
+
+header, footer {
+    background-color: #222;
+    color: #f8f9fa;
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+}
+
+main {
+    position: relative;
+    width: 800px; /* Ancho fijo para el canvas */
+}
+
+#juegoCanvas {
+    border: 2px solid #d3d3d3; /* Cambiar a gris claro */
+    cursor: url("img/cursor1.png"), auto; /* Ruta del puntero personalizada */
+    background: url("img/fondo.png") no-repeat center center; /* Fondo del canvas */
+    background-size: cover; /* Cubre todo el canvas */
+}
+
+#contador {
+    font-size: 1.5em;
+    color: red; /* Cambiar el color a rojo */
+    position: absolute;
+    bottom: 10px; /* Coloca el contador en la esquina inferior derecha */
+    right: 10px;
+    font-weight: bold; /* Hace que el texto sea negrita */
+}
+
+#timer {
+    font-size: 1.5em;
+    color: white; /* Color del temporizador */
+    position: absolute;
+    bottom: 10px; /* Coloca el temporizador en la esquina inferior izquierda */
+    left: 10px;
+}
+
+.tab {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.background {
+    background: url("img/fondo.png") no-repeat center center; /* Fondo del canvas */
+    background-size: cover; /* Cubre todo el contenedor */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+}
+
+#instrucciones {
+    font-size: 0.8em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px; /* Separación del canvas */
+}
